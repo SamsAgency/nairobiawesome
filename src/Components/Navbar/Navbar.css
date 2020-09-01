@@ -1,0 +1,24 @@
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(6, 1, 7);
+    margin-left: 0 !important;
+    margin-top: 0;
+    color: rgb(253, 235, 235);
+}
+.logo{
+    margin-left: 2%;
+}
+
+.ul{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    margin-left: 3px;
+    padding: 0%;
+}
+
+.li{
+    list-style: none;
+    padding: 0%;
+}
