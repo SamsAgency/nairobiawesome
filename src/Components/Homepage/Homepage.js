@@ -1,53 +1,41 @@
-import React, { Component} from "react";
+import React, {useEffect} from "react";
 import Cards from "./cards";
+import { fetchUsers } from './../../redux/actions';
+import { connect } from "react-redux";
 
-class Homepage extends Component{
-  constructor(props){
-    super(props)
 
-    this.state = {}
-  }
 
-  render(){
-    return(
-      <div>
-        <h1>I am the homepage</h1>
-      </div>
-    )
+const Homepage = ({userData, fetchUsers }) => {
+  // const [users, setUsers] = useState(userData)
+
+  useEffect(() => {
+    fetchUsers();
+  }, []);
+
+  return (
+    <div>
+      <h1> I am the Homepage </h1>
+      
+      {
+        // userData.results.map(user => <Cards key={user.id} user = {user}/>)
+        console.log(userData)
+      }
+      <Cards/>
+    </div>
+  )
+}
+
+const mapStateToProps = state => {
+  return {
+    userData : state.usersReducer.users
   }
 }
-export default Homepage
 
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchUsers : () => dispatch(fetchUsers())
+  }
+}
 
+export default connect(mapStateToProps, mapDispatchToProps)(Homepage)
 
-
-
-
-
-// const Homepage = () => {
-//   const [persons, setpersons] = useState([])
-
-//   useEffect(() => {
-//     getData();
-//   }, []);
-
-//   const getData = async () => {
-//     const getDataFromApi = await fetch(
-//       "https://rickandmortyapi.com/api/character"
-//     );
-//     const jsonData = await getDataFromApi.json();
-//     console.log(jsonData.results);
-
-//     setpersons(jsonData.resuts);
-//   };
-
-
-//   let itemsToRender;
-//   if (persons) {
-//     itemsToRender = persons.map(item => {
-//       return <Cards/>;
-//     });
-//   }
-//   return {itemsToRender};
-// };
-// export default Homepage;

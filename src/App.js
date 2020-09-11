@@ -6,24 +6,28 @@ import Premium from "./Components/Premium/Premium";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Regular from "./Components/Regular/Regular";
-import NothingHere from './Components/404/404';
+import NothingHere from "./Components/404/404";
+import { Provider } from "react-redux";
+import store from './redux/store';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
+     <Provider store={store}>
+      <Router>
+        <div className="App">
+          <Navbar />
 
-        <Switch>
-          <Route path="/" exact component={Homepage} />
-          <Route path="/premium" component={Premium} />
-          <Route path="/regular" component={Regular} />
-          <Route component={NothingHere}/>
-        </Switch>
+          <Switch>
+            <Route path="/" exact component={Homepage} />
+            <Route path="/premium" component={Premium} />
+            <Route path="/regular" component={Regular} />
+            <Route component={NothingHere} />
+          </Switch>
 
-        <Footer />
-      </div>
-    </Router>
+          <Footer />
+        </div>
+      </Router>
+    </Provider>
   );
 }
 
