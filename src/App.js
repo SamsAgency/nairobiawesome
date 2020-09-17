@@ -22,6 +22,7 @@ function App() {
             <Route path="/premium" component={Premium} />
             <Route path="/regular" component={Regular} />
             <Route component={NothingHere} />
+            <Route />
           </Switch>
 
           <Footer />
@@ -30,5 +31,6 @@ function App() {
     </Provider>
   );
 }
+
 
 export default App;

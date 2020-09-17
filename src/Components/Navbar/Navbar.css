@@ -1,6 +1,7 @@
 .Navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: rgb(6, 1, 7);
     margin-left: 0 !important;
     margin-top: 0;
@@ -8,6 +9,7 @@
 }
 .logo{
     margin-left: 2%;
+    font-size: 20px;
 }
 
 .ul{
@@ -20,5 +22,8 @@
 
 .li{
     list-style: none;
+    text-decoration: none !important;
+    color: white;
+    font-size: 16px;
     padding: 0%;
 }

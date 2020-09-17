@@ -1,0 +1,16 @@
+.card {
+    margin: 10px;
+    background-color: rgb(7, 4, 19);
+    border-radius: 3px;
+    animation: anime 2s ease-in-out ;
+    box-shadow: 5px, 5px  black;
+}
+
+@keyframes anime {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
