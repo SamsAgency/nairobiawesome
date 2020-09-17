@@ -11,7 +11,7 @@
     color: white;
     animation: float 3s infinite;
     position: relative;
-    filter: drop-shadow();
+    filter: drop-shadow(2px 20px 5px #000000);
 }
 
 @keyframes float {
@@ -30,4 +30,5 @@
 .subtitle-font{
     font-size: 50px;
     color: white;
+    filter: drop-shadow(2px 10px 5px #000000)
 }
