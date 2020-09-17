@@ -1,0 +1,33 @@
+.not-found{
+    width: 80%;
+    margin-left: 10vw;
+    margin-right: 10vw;
+   
+}
+
+
+.big-font{
+    font-size: 200px;
+    color: white;
+    animation: float 3s infinite;
+    position: relative;
+    filter: drop-shadow();
+}
+
+@keyframes float {
+    0% {
+        top: -25vh
+    }
+    50% {
+        top: 10vh;
+    }
+    100% {
+        top: -25vh
+    }
+}
+
+
+.subtitle-font{
+    font-size: 50px;
+    color: white;
+}
